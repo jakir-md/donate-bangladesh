@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css ">
+    <title>Donate Bangladesh</title>
+</head>
+<body>
+    <!-- header section -->
+    <header>
+      <!-- navigation section -->
+      <section class="flex justify-around items-center bg-[rgb(249,247,243)] py-3">
+        <button class="btn btn-sm primaryBtnColor">Blog</button>
+        <div class="flex justify-between items-center ">
+          <img src="styles/assets/logo.png" alt="" class="px-3">
+          <h3 class="text-xl font-extrabold">Donate Bangladesh</h3>
+        </div>
+        <div class="flex justify-between items-center">
+          <img src="styles/assets/coin.png" alt="">
+          <div class="flex justify-between font-bold">
+            <h2 class="px-1" id="myTotalBalance">5000</h2>
+            <h2 class="px-1">BDT</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="navigationSection mx-auto my-3 text-center">
+        <button class="btn primaryBtnColor px-5 text-xl">Donation</button>
+        <button class="btn border rounded-lg bg-white px-5 text-xl">History</button>
+      </section>
+    </header>
+
+
+    <!-- main section -->
+    <main class="w-5/6 mx-auto">
+      <section>
+        <!-- Noakhali Affected Area -->
+        <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-8 border rounded-lg">
+          <img src="styles/assets/noakhali.png" alt="Noakhali flood affected regio" class="cardImage">
+          <div class="card-body py-0">
+            <div class="flex bg-gray-200 w-36 border rounded-lg font-bold text-xl px-1 py-1 items-center">
+              <img src="styles/assets/coin.png" alt="">
+              <div class="flex justify-between">
+                <h2 class="px-1" id="noakhaliDonation">5000</h2>
+                <h2 class="px-1">BDT</h2>
+              </div>
+            </div>
+            <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+            <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+            <div>
+              <input id="noakhaliDonateTaka" class="input input-bordered join-item w-full" placeholder="Write Donation Amount" required/>
+            </div>
+            <div class="card-actions">
+              <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box text-center">
+                  <h2 class="text-xl font-bold">Congratulation!</h2>
+                  <img class="mx-auto my-3" src="styles/assets/coin.png" alt="">
+                  <p class="py-4">You have donated For Humankind</p>
+                  <h3 class="text-xl font-bold">Successfully</h3>
+                  <div class="modal-action">
+                    <button id="closeModalBtn" class="btn px-5 w-full">close confirmation</button>
+                  </div>
+                </div>
+              </dialog>
+              <button class="btn primaryBtnColor px-5 text-xl w-full" id="noakhaliDonateBtn">Donate Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feni Affected Area -->
+        <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-8 border rounded-lg">
+          <img src="styles/assets/feni.png" alt="Feni flood affected region" class="cardImage">
+          <div class="card-body py-0">
+            <div class="flex bg-gray-200 w-36 border rounded-lg font-bold text-xl px-1 py-1 items-center">
+              <img src="styles/assets/coin.png" alt="">
+              <div class="flex justify-between">
+                <h2 class="px-1" id="feniDonation">5000</h2>
+                <h2 class="px-1">BDT</h2>
+              </div>
+            </div>
+            <h2 class="card-title">Donate for Flood Relief in Feni, Bangladesh</h2>
+            <p> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+            <div>
+              <input id="feniDonatedTaka" class="input input-bordered join-item w-full" placeholder="Write Donation Amount" />
+            </div>
+            <div class="card-actions">
+              <dialog id="my_modal_2" class="modal">
+                <div class="modal-box">
+                  <h3 class="text-lg font-bold">Hello!</h3>
+                  <p class="py-4">Press ESC key or click outside to close</p>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>
+              <button class="btn primaryBtnColor px-5 text-xl w-full" onclick="my_modal_2.showModal()" id="feniDonateBtn">Donate Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quota Movement Aid -->
+        <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-8 border rounded-lg">
+          <img src="styles/assets/quota-protest.png" alt="Noakhali flood affected regio" class="cardImage">
+          <div class="card-body py-0">
+            <div class="flex bg-gray-200 w-36 border rounded-lg font-bold text-xl px-1 py-1 items-center">
+              <img src="styles/assets/coin.png" alt="">
+              <div class="flex justify-between">
+                <h2 class="px-1" id="quotaDonation">5000</h2>
+                <h2 class="px-1">BDT</h2>
+              </div>
+            </div>
+            <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+            <p> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+            <div>
+              <input id="quotaDonatedTaka" class="input input-bordered join-item w-full" placeholder="Write Donation Amount" />
+            </div>
+            <div class="card-actions">
+              <dialog id="my_modal_3" class="modal">
+                <div class="modal-box">
+                  <h3 class="text-lg font-bold">Hello!</h3>
+                  <p class="py-4">Press ESC key or click outside to close</p>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>
+              <button class="btn primaryBtnColor px-5 text-xl w-full" onclick="my_modal_3.showModal()" id="quotaDonateBtn">Donate Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+  <script src="js/utilities.js"></script>
+  <script src="js/donationUpdate.js"></script>
+</body>
+</html>
