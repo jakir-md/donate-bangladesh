@@ -10,10 +10,10 @@
 </head>
 <body>
     <!-- header section -->
-    <header>
+    <header class="fixed top-0 w-full z-10 bg-gradient-to-b from-[rgb(247,232,203)] to-[rgb(239,237,233)]">
       <!-- navigation section -->
-      <section class="flex justify-around items-center bg-[rgb(249,247,243)] py-3">
-        <button class="btn btn-sm primaryBtnColor">Blog</button>
+      <section class="flex justify-evenly items-center py-3">
+        <button class="btn primaryBtnColor text-xl hidden md:block">Blog</button>
         <div class="flex justify-between items-center ">
           <img src="styles/assets/logo.png" alt="" class="px-3">
           <h3 class="text-xl font-extrabold">Donate Bangladesh</h3>
@@ -27,21 +27,22 @@
         </div>
       </section>
 
-      <section class="navigationSection mx-auto my-3 text-center">
-        <button class="btn primaryBtnColor px-5 text-xl">Donation</button>
-        <button class="btn border rounded-lg bg-white px-5 text-xl">History</button>
+      <section class="navigationSection mx-auto mb-2 md:my-3 my-0 text-center">
+        <button id="donationBtn" class="btn primaryBtnColor px-5 text-xl">Donation</button>
+        <button id="historyBtn" class="btn border rounded-lg px-5 text-xl">History</button>
+        <button id="blogBtn" class="btn md:hidden inline border rounded-lg px-5 text-xl">Blog</button>
       </section>
     </header>
 
 
     <!-- main section -->
-    <main class="w-5/6 mx-auto">
+    <main class="md:w-5/6 w-11/12 mx-auto mt-44">
       <section id="donationSection">
         <!-- Noakhali Affected Area -->
-        <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-8 border rounded-lg">
-          <img src="styles/assets/noakhali.png" alt="Noakhali flood affected regio" class="cardImage">
-          <div class="card-body py-0">
-            <div class="flex bg-gray-200 w-36 border rounded-lg font-bold text-xl px-1 py-1 items-center">
+        <div class="card lg:card-side bg-base-100 shadow-xl md:p-5 p-2 mt-8 border rounded-lg">
+          <img src="styles/assets/noakhali.png" alt="Noakhali flood affected region" class="cardImage">
+          <div class="card-body py-0 md:px-5 px-1 md:mt-0 mt-2">
+            <div class="flex gap-1 bg-gray-200 w-36 border rounded-lg font-bold text-xl px-1 py-1 items-center">
               <img src="styles/assets/coin.png" alt="">
               <div class="flex justify-between">
                 <h2 class="px-1" id="noakhaliDonation">5000</h2>
@@ -71,9 +72,9 @@
         </div>
 
         <!-- Feni Affected Area -->
-        <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-8 border rounded-lg">
+        <div class="card lg:card-side bg-base-100 shadow-xl md:p-5 p-2 mt-8 border rounded-lg">
           <img src="styles/assets/feni.png" alt="Feni flood affected region" class="cardImage">
-          <div class="card-body py-0">
+          <div class="card-body py-0 md:px-5 px-1 md:mt-0 mt-2">
             <div class="flex bg-gray-200 w-36 border rounded-lg font-bold text-xl px-1 py-1 items-center">
               <img src="styles/assets/coin.png" alt="">
               <div class="flex justify-between">
@@ -102,9 +103,9 @@
         </div>
 
         <!-- Quota Movement Aid -->
-        <div class="card lg:card-side bg-base-100 shadow-xl p-5 mt-8 border rounded-lg">
+        <div class="card lg:card-side bg-base-100 shadow-xl md:p-5 p-2 mt-8 border rounded-lg">
           <img src="styles/assets/quota-protest.png" alt="Noakhali flood affected regio" class="cardImage">
-          <div class="card-body py-0">
+          <div class="card-body py-0 md:px-5 px-1 md:mt-0 mt-2">
             <div class="flex bg-gray-200 w-36 border rounded-lg font-bold text-xl px-1 py-1 items-center">
               <img src="styles/assets/coin.png" alt="">
               <div class="flex justify-between">
@@ -133,7 +134,7 @@
         </div>
       </section>
 
-      <section id="historySection">
+      <section id="historySection" hidden>
 
       </section>
     </main>
