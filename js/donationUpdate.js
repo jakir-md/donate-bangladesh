@@ -16,6 +16,7 @@ document.getElementById('noakhaliDonateBtn').addEventListener('click', (event) =
         modal.showModal();
         document.getElementById('closeModalBtn').addEventListener('click', () => {
             modal.close();
-        })
+        });
+        updateHistory('nokhaliDonationText', donatedTaka);
     }
 })
