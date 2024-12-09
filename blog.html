@@ -12,7 +12,7 @@
     <header class="fixed top-0 w-full z-10 bg-gradient-to-b from-[rgb(247,232,203)] to-[rgb(239,237,233)]">
         <!-- navigation section -->
         <section class="flex justify-evenly items-center py-3">
-          <button id="homeBtn" class="btn primaryBtnColor text-xl">Home</button>
+          <button id="homeBtnUp" class="btn hidden md:inline primaryBtnColor text-xl">Home</button>
           <div class="flex justify-between items-center ">
             <img src="styles/assets/logo.png" alt="" class="px-3">
             <h3 class="text-xl font-extrabold">Donate Bangladesh</h3>
@@ -25,37 +25,70 @@
             </div>
           </div>
         </section>
+
+        <section class="navigationSection mx-auto mb-2 md:my-3 my-0 text-center">
+          <button id="homeBtn" class="btn md:hidden inline border primaryBtnColor rounded-lg px-5 text-xl">Home</button>
+        </section>
     </header>
 
-    <main class="md:w-5/6 w-11/12 mx-auto mt-28">
-        <div class="join join-vertical w-full">
+    <main class="md:w-5/6 w-11/12 mx-auto mt-40">
+      <h1 class="text-3xl font-bold mb-3">Important FAQ: </h1>
+        <div class="join join-vertical w-full mb-16">
             <div class="collapse collapse-arrow join-item border-base-300 border">
               <input type="radio" name="my-accordion-4" checked="checked" />
-              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-title text-xl font-medium">What is document object model(DOM)?</div>
               <div class="collapse-content">
-                <p>hello</p>
+                <p>The document object model represents the HTML document as a tree of objects which are called nodes. Using the dom developer can make dynamic websites, handle events and make real-time updates to the website.</p>
               </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
               <input type="radio" name="my-accordion-4" />
-              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-title text-xl font-medium">How do You select an element from the DOM?</div>
               <div class="collapse-content">
-                <p>hello</p>
+                <p>To Select an element from dom we can use several methods: For instance,</p>
+                <ol class="list-decimal pl-5">
+                  <li>document.getElementById()</li>
+                  <li>document.getElementsByClassName()</li>
+                  <li>document.getElementByTagName()</li>
+                  <li>document.querySelector()</li>
+                  <li>document.querySelectorAll()</li>
+                </ol>
               </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
               <input type="radio" name="my-accordion-4" />
-              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-title text-xl font-medium">What is event delegation in the context of DOM and why is useful?</div>
               <div class="collapse-content">
-                <p>hello</p>
+                <p>Event Delegation is a technique in JavaScript where a parent element is used to manage event listeners for its child elements. Instead of attaching event listeners to individual child elements, you add a single listener to a common parent element. The parent listens for events from its children using event bubbling.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using DOM?</div>
+              <div class="collapse-content">
+                <h2 class="font-bold">Manipulating Attributes:</h2>
+                <ol class="list-decimal pl-5">
+                  <li>getAttribute()</li>
+                  <li>setAttribute()</li>
+                  <li>removeAttribute()</li> 
+                </ol>
+                <h2 class="mt-3 font-bold">Manipulating Styles:</h2>
+                <ol class="list-decimal pl-5">
+                  <li>classList.add()</li>
+                  <li>classList.remove()</li>
+                  <li>element.style.style_name = 'value of the style'</li>
+                </ol>
               </div>
             </div>
         </div>
     </main>
     <script>
-        const navigateBtn = document.getElementById('homeBtn');
+        const navigateBtn = document.getElementById('homeBtnUp');
         navigateBtn.addEventListener('click', () => {
-            window.location.href = '/index.html'; // Replace with your desired URL
+            window.location.href = 'index.html'; // Replace with your desired URL
+        });
+        document.getElementById('homeBtn').addEventListener('click', () => {
+            window.location.href = 'index.html'; // Replace with your desired URL
         });
     </script>
 </body>
