@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css ">
+    <title>Recent Blogs</title>
+</head>
+<body>
+    <header class="fixed top-0 w-full z-10 bg-gradient-to-b from-[rgb(247,232,203)] to-[rgb(239,237,233)]">
+        <!-- navigation section -->
+        <section class="flex justify-evenly items-center py-3">
+          <button id="homeBtn" class="btn primaryBtnColor text-xl">Home</button>
+          <div class="flex justify-between items-center ">
+            <img src="styles/assets/logo.png" alt="" class="px-3">
+            <h3 class="text-xl font-extrabold">Donate Bangladesh</h3>
+          </div>
+          <div class="flex justify-between items-center">
+            <img src="styles/assets/coin.png" alt="">
+            <div class="flex justify-between font-bold">
+              <h2 class="px-1" id="myTotalBalance">5000</h2>
+              <h2 class="px-1">BDT</h2>
+            </div>
+          </div>
+        </section>
+    </header>
+
+    <main class="md:w-5/6 w-11/12 mx-auto mt-28">
+        <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const navigateBtn = document.getElementById('homeBtn');
+        navigateBtn.addEventListener('click', () => {
+            window.location.href = '/index.html'; // Replace with your desired URL
+        });
+    </script>
+</body>
+</html>

@@ -35,3 +35,7 @@ document.getElementById('donationBtn').addEventListener('click', () => {
     document.getElementById('historyBtn').classList.remove('primaryBtnColor');
     document.getElementById('donationBtn').classList.add('primaryBtnColor');
 });
+
+document.getElementById('blogBtnUp').addEventListener('click', () => {
+    window.location.href = '/blog.html';
+});
